@@ -24,16 +24,6 @@ Our goal is to create a user-friendly and transparent platform where users can m
 
 - **Responsive Design:** Ensures a consistent and optimized experience across various devices.
 
-## How to Contribute
-
-We welcome contributions from the open-source community. If you'd like to contribute to the project, please follow our [Contribution Guidelines](CONTRIBUTING.md).
-
-## Getting Started
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
 ## Contact
 
 For any inquiries or collaborations, feel free to contact us at  < shivammauryasm007@gmail.com >.
