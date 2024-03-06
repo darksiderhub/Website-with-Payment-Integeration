@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Helping Hand Foundation</title>
+    <link rel="icon" href="logo.png">
+    <script src="https://js.instamojo.com/v1/checkout.js"></script>
+    <script>
+        /* Start client-defined Callback Handler Functions */
+        function onOpenHandler() {
+            alert('Payments Modal is Opened');
+        }
+
+        function onCloseHandler() {
+            alert('Payments Modal is Closed');
+        }
+
+        function onPaymentSuccessHandler(response) {
+            alert('Payment Success');
+            console.log('Payment Success Response', response);
+        }
+
+        function onPaymentFailureHandler(response) {
+            alert('Payment Failure');
+            console.log('Payment Failure Response', response);
+        }
+        /* End client-defined Callback Handler Functions */
+
+        /* Configuring Handlers */
+        Instamojo.configure({
+            handlers: {
+                onOpen: onOpenHandler,
+                onClose: onCloseHandler,
+                onSuccess: onPaymentSuccessHandler,
+                onFailure: onPaymentFailureHandler
+            }
+        });
+
+        function onButtonClick() {
+            Instamojo.open('https://www.instamojo.com/@Helpinghandtrust/');
+        }
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <span><img src="logo.png" class="img" alt=""></span>
+        <h1><span id="element"></span></h1>
+        <nav>
+            <ul>
+                <li><a class="nav-link nav-link-ltr" href="#home">Home</a></li>
+                <li><a class="nav-link nav-link-ltr" href="about.html">About Us</a></li>
+                <li><a class="nav-link nav-link-ltr" href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="main-container">
+        <div class="main-left">
+            <h2>Welcome to Helping Hand Foundation</h2>
+            <p><b>Introducing the Helping Hand Foundation: Illuminating Futures, Transforming Lives
+                </b>.
+                <span class="cur2">
+                In a world where countless children face the harsh realities of poverty and limited opportunities, the
+                Helping Hand Foundation emerges as a beacon of hope and support. Dedicated to making a tangible
+                difference in the lives of underprivileged children, our foundation stands committed to the belief that
+                every child deserves a chance to thrive and reach their full potential.Empowering positive change in the
+                community.</span>
+                </p>
+
+            <p class="cursive">Join us in this noble journey as we extend our Helping Hand to uplift, inspire, and create a world where
+                every child's dreams can become a reality. Together, let us build a brighter tomorrow for the children
+                who need it most.</p>
+
+            <a href="#" id="en">Explore Now →</a>
+            <div id="pay">
+                <form>
+                    <script src="https://checkout.razorpay.com/v1/payment-button.js"
+                        data-payment_button_id="pl_NidkeGYmNA263O" async>
+                        </script>
+                </form>
+            </div>  
+        </div>
+
+        <div class="main-right">
+            <br><br>
+            <img src="right.png" alt="Image" id="right">
+        </div>
+    </div>
+
+
+
+
+
+    <footer>
+        <p>&copy; 2024 Helping Hand Foundation. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['<b>Helping Hand</b> Foundation :', 'Sparkling Smiles, Shaping Futures !!'],
+            typeSpeed: 70,
+        });
+    </script>
+</body>
+
+</html>
